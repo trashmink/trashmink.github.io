@@ -1,0 +1,22 @@
+@use 'reset';
+
+body {
+    font-family: monaco, monospace;
+    text-transform: lowercase;
+}
+
+a {
+    color: hotpink;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
