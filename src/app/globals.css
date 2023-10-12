@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 211, 205;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  text-transform: lowercase;
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.title-page {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+    }
+}
+
+h1 {
+  color: rgb(var(--background-start-rgb));
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
+header li a {
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+}
+
+header li a:hover, header li a:focus, header li a.active {
+  background-color: rgb(var(--background-start-rgb));
+  border: 1px solid #000;
+}
